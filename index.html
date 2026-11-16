@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#fff7f8">
+<title>Girlista — Chic & Unique Outfits</title>
+<meta name="description" content="Découvrez les looks Girlista : des tenues chic et uniques, sélectionnées avec soin. Livraison partout au Maroc.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--pink:#f6b7c8;--pink2:#ffe7ed;--red:#a8173d;--ink:#321b25;--cream:#fffafb;--muted:#856c75}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--cream);color:var(--ink);font-family:"DM Sans",sans-serif;overflow-x:hidden}
+a{color:inherit;text-decoration:none}button{font:inherit}
+.topline{background:var(--red);color:white;text-align:center;padding:9px 12px;font-size:11px;letter-spacing:2px;text-transform:uppercase}
+header{height:78px;display:flex;align-items:center;justify-content:space-between;padding:0 7vw;background:#fffafbdf;backdrop-filter:blur(16px);position:sticky;top:0;z-index:20;border-bottom:1px solid #f4dce3}
+.logo{font-family:"Playfair Display",serif;font-size:27px;font-weight:700;letter-spacing:1px;color:var(--red)}.logo span{color:#d98da5}
+nav{display:flex;gap:34px;font-size:13px;color:#604651}nav a{transition:.25s}nav a:hover{color:var(--red)}
+.header-cta,.btn{border:0;background:var(--red);color:white;padding:13px 21px;border-radius:30px;font-size:12px;letter-spacing:.7px;cursor:pointer;display:inline-flex;align-items:center;gap:10px;transition:transform .3s,box-shadow .3s}
+.header-cta:hover,.btn:hover{transform:translateY(-3px);box-shadow:0 12px 25px #a8173d38}
+.menu{display:none;border:0;background:none;font-size:25px;color:var(--red)}
+.hero{min-height:690px;display:grid;grid-template-columns:1fr 1fr;align-items:center;padding:55px 9vw 75px;position:relative;overflow:hidden;background:radial-gradient(circle at 80% 45%,#f9d5df 0,transparent 37%),linear-gradient(120deg,#fffafb,#fff0f4)}
+.hero:before,.hero:after{content:"";position:absolute;border:1px solid #e9aabd70;border-radius:50%;width:540px;height:540px;right:-110px;top:65px;animation:orbit 28s linear infinite}.hero:after{width:410px;height:410px;right:-45px;top:130px;animation-direction:reverse}
+@keyframes orbit{to{transform:rotate(360deg)}}
+.hero-copy{position:relative;z-index:2;max-width:560px}.eyebrow{color:var(--red);font-size:11px;letter-spacing:3px;text-transform:uppercase;font-weight:700}
+h1,h2{font-family:"Playfair Display",serif;font-weight:600}h1{font-size:clamp(48px,6vw,82px);line-height:1.02;margin:22px 0;color:#421d2b}h1 em{font-style:normal;color:var(--red)}.hero-copy p{color:var(--muted);line-height:1.8;max-width:420px;font-size:15px;margin:24px 0 30px}
+.hero-note{display:flex;align-items:center;gap:12px;margin-top:25px;color:#927780;font-size:11px;letter-spacing:1px}.hero-note:before{content:"";width:38px;height:1px;background:#c98298}
+.hero-visual{position:relative;z-index:2;display:flex;justify-content:center;align-items:center;min-height:520px;perspective:1000px}
+.hero-orb{position:absolute;width:min(440px,80vw);aspect-ratio:1;border-radius:50%;background:linear-gradient(145deg,#fff,#f5c1d0);box-shadow:inset -18px -22px 50px #d989a45c,0 35px 80px #b45a7930}
+.hero-photo{position:relative;width:min(350px,75%);height:480px;object-fit:cover;object-position:center 25%;border-radius:180px 180px 24px 24px;box-shadow:0 35px 70px #74374b40;transform:rotateY(-9deg) rotateZ(2deg);transition:transform .5s}
+.hero-visual:hover .hero-photo{transform:rotateY(0) rotateZ(0) translateY(-8px)}
+.floating-tag{position:absolute;background:#fff;padding:15px 19px;border-radius:15px;box-shadow:0 15px 35px #7c3b5120;font-size:11px;letter-spacing:1px;animation:float 4s ease-in-out infinite}.tag-one{left:0;top:105px}.tag-two{right:0;bottom:100px;animation-delay:-2s}
+@keyframes float{50%{transform:translateY(-13px)}}
+.section{padding:105px 8vw}.section-head{text-align:center;max-width:600px;margin:0 auto 48px}.section-head .eyebrow{margin-bottom:13px}.section-head h2{font-size:clamp(35px,4vw,52px);margin:0 0 13px}.section-head p{color:var(--muted);font-size:14px;line-height:1.8}
+.categories{display:flex;justify-content:center;gap:12px;flex-wrap:wrap;margin-bottom:35px}.chip{border:1px solid #edcbd5;background:white;border-radius:30px;padding:10px 18px;color:#805968;font-size:12px;cursor:pointer;transition:.25s}.chip.active,.chip:hover{background:var(--red);color:white;border-color:var(--red)}
+.products{display:grid;grid-template-columns:repeat(3,1fr);gap:25px;max-width:1180px;margin:auto}
+.product{background:#fff;border:1px solid #f3e1e7;border-radius:18px;overflow:hidden;box-shadow:0 12px 35px #5a24350a;transform-style:preserve-3d;transition:box-shadow .35s,transform .2s;position:relative}
+.product:hover{box-shadow:0 25px 55px #702b451c}.product-media{height:390px;overflow:hidden;background:#f6e9ed;position:relative}.product-media img{width:100%;height:100%;object-fit:cover;transition:transform .8s cubic-bezier(.2,.7,.2,1)}.product:hover img{transform:scale(1.07)}
+.product-label{position:absolute;top:15px;left:15px;background:#fffdf0e8;color:var(--red);padding:8px 11px;border-radius:20px;font-size:9px;letter-spacing:1px;text-transform:uppercase}.product-detail-thumb{position:absolute;right:14px;bottom:14px;width:88px;height:108px;object-fit:cover;border:3px solid white;border-radius:12px;box-shadow:0 8px 24px #321b2540;transition:transform .35s}.product:hover .product-detail-thumb{transform:translateY(-4px) rotate(2deg)}
+.product-info{padding:19px 20px 22px;display:flex;align-items:center;justify-content:space-between;gap:10px}.product-info h3{font-family:"Playfair Display",serif;font-size:19px;margin:0 0 6px}.product-info p{font-size:11px;color:#9a7d87;margin:0}.product-link{width:39px;height:39px;border-radius:50%;display:grid;place-items:center;background:var(--pink2);color:var(--red);font-size:18px;flex-shrink:0;transition:.25s}.product-link:hover{background:var(--red);color:white;transform:rotate(-35deg)}
+.story{background:linear-gradient(120deg,#a8173d,#6d1633);color:white;display:grid;grid-template-columns:1fr 1fr;gap:55px;align-items:center;padding:90px 10vw;position:relative;overflow:hidden}.story:after{content:"G";font-family:"Playfair Display";font-size:440px;position:absolute;right:2%;top:-160px;color:#ffffff0b}.story-image{height:440px;width:100%;object-fit:cover;border-radius:160px 160px 20px 20px;box-shadow:0 25px 65px #28091455;position:relative;z-index:1}.story-copy{position:relative;z-index:1}.story-copy .eyebrow{color:#ffc8d7}.story-copy h2{font-size:clamp(38px,4vw,56px);line-height:1.1;margin:18px 0}.story-copy p{line-height:1.9;color:#f8dfe7;font-size:14px;max-width:470px}.story .btn{background:white;color:var(--red);margin-top:15px}
+.benefits{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;max-width:1100px;margin:auto}.benefit{text-align:center;padding:28px 18px;border:1px solid #f1dce3;border-radius:16px;background:white}.benefit .symbol{font-size:27px;color:var(--red)}.benefit h3{font-family:"Playfair Display";font-size:18px;margin:13px 0 7px}.benefit p{font-size:12px;color:var(--muted);line-height:1.7;margin:0}
+.insta{background:#fff0f4;text-align:center;padding:85px 20px}.insta h2{font-size:clamp(35px,4vw,50px);margin:12px 0}.insta p{color:var(--muted);font-size:14px;margin-bottom:25px}
+footer{background:#321b25;color:#f9e9ee;padding:38px 8vw;display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap}.footer-logo{font-family:"Playfair Display";font-size:24px}.footer-logo span{color:#f4a9bf}footer small{color:#d6b9c3;font-size:11px}
+.reveal{opacity:0;transform:translateY(35px);transition:opacity .8s ease,transform .8s cubic-bezier(.2,.7,.2,1)}.reveal.visible{opacity:1;transform:translateY(0)}
+@media(max-width:900px){nav{gap:17px}.hero{padding-left:6vw;padding-right:6vw}.products{grid-template-columns:repeat(2,1fr)}.story{padding:75px 7vw;gap:30px}}
+@media(max-width:650px){header{height:66px;padding:0 5vw}.menu{display:block}.header-cta{display:none}nav{display:none;position:absolute;top:66px;left:0;right:0;background:white;padding:20px;flex-direction:column;gap:20px;text-align:center;border-bottom:1px solid #f3dce4}nav.open{display:flex}.hero{grid-template-columns:1fr;padding:55px 7vw 60px;text-align:center}.hero-copy{margin:auto}.hero-copy p{margin-left:auto;margin-right:auto}.hero-note{justify-content:center}.hero-visual{min-height:440px;margin-top:20px}.hero-photo{height:400px;width:270px}.tag-one{left:-4px}.tag-two{right:-4px}.section{padding:75px 5vw}.products{grid-template-columns:1fr;max-width:420px}.product-media{height:440px}.story{grid-template-columns:1fr;padding:70px 7vw}.story-image{height:390px;max-width:420px;margin:auto}.benefits{grid-template-columns:1fr}.section-head{margin-bottom:35px}footer{justify-content:center;text-align:center;flex-direction:column}}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{scroll-behavior:auto!important;animation:none!important;transition:none!important}.reveal{opacity:1;transform:none}}
+
+/* Cinematic scroll atmosphere */
+html{scroll-padding-top:82px}
+body:before{content:"";position:fixed;inset:0;pointer-events:none;z-index:30;opacity:.12;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.12'/%3E%3C/svg%3E")}
+.scroll-progress{position:fixed;top:0;left:0;width:0;height:3px;background:linear-gradient(90deg,#f6b7c8,#a8173d);z-index:100;box-shadow:0 0 12px #d95c83}
+.product,.benefit,.story-image,.hero-photo{will-change:transform}
+.product{transition:box-shadow .45s,transform .22s,border-color .45s}.product:hover{border-color:#e7aabd}
+.product-media:after{content:"";position:absolute;inset:-60% auto -60% -70%;width:45%;transform:rotate(18deg);background:linear-gradient(90deg,transparent,#ffffff70,transparent);transition:left .9s ease;pointer-events:none}.product:hover .product-media:after{left:130%}
+.hero-photo{animation:heroArrive 1.2s cubic-bezier(.2,.75,.25,1) both,photoFloat 7s ease-in-out 1.2s infinite}
+@keyframes heroArrive{from{opacity:0;transform:translateY(45px) rotateY(-20deg) scale(.94)}to{opacity:1;transform:translateY(0) rotateY(-9deg) rotateZ(2deg) scale(1)}}
+@keyframes photoFloat{0%,100%{translate:0 0}50%{translate:0 -12px}}
+.story{background-size:180% 180%;animation:storyGlow 14s ease-in-out infinite alternate}@keyframes storyGlow{from{background-position:0% 50%}to{background-position:100% 50%}}
+.reveal{transition-delay:var(--reveal-delay,0ms)}.reveal.visible{animation:cinemaIn .85s cubic-bezier(.2,.75,.25,1) both}
+@keyframes cinemaIn{from{filter:blur(5px);opacity:0;transform:translateY(42px) scale(.985)}to{filter:blur(0);opacity:1;transform:translateY(0) scale(1)}}
+.whatsapp-float{position:fixed;right:25px;bottom:24px;z-index:50;display:flex;align-items:center;gap:11px;padding:13px 19px;border-radius:999px;background:#20bd68;color:white;font-weight:700;font-size:13px;box-shadow:0 12px 35px #126b3b45;transition:transform .3s,box-shadow .3s;animation:waPulse 2.8s ease-in-out infinite}
+.whatsapp-float:hover{transform:translateY(-5px) scale(1.03);box-shadow:0 18px 40px #126b3b55}.whatsapp-float svg{width:21px;height:21px;fill:currentColor}.whatsapp-float span{white-space:nowrap}
+@keyframes waPulse{0%,100%{box-shadow:0 12px 35px #126b3b35,0 0 0 0 #20bd6840}50%{box-shadow:0 12px 35px #126b3b35,0 0 0 9px #20bd6800}}
+@media(max-width:650px){.whatsapp-float{right:15px;bottom:15px;padding:13px;border-radius:50%}.whatsapp-float span{display:none}}
+@media(prefers-reduced-motion:reduce){.hero-photo,.story,.whatsapp-float{animation:none!important}}
+
+</style>
+</head>
+<body>
+<div class="scroll-progress" id="scrollProgress"></div>
+<div class="topline">Chic & unique outfits · Livraison partout au Maroc</div>
+<header>
+  <a class="logo" href="#">GIRLISTA<span>♡</span></a>
+  <nav id="nav"><a href="#accueil">Accueil</a><a href="#collection">Collection</a><a href="#histoire">Notre univers</a><a href="#contact">Contact</a></nav>
+  <a class="header-cta" href="https://wa.me/message/MLTKQPDCK53NH1" target="_blank" rel="noopener">Commander sur WhatsApp ↗</a>
+  <button class="menu" id="menu" aria-label="Ouvrir le menu">☰</button>
+</header>
+<main>
+<section class="hero" id="accueil">
+  <div class="hero-copy reveal">
+    <div class="eyebrow">La mode avec une touche de douceur</div>
+    <h1>Un style qui<br><em>vous ressemble.</em></h1>
+    <p>Des tenues chic, féminines et uniques, sélectionnées avec soin pour accompagner chaque moment avec élégance.</p>
+    <a class="btn" href="#collection">Explorer la collection <span>→</span></a>
+    <div class="hero-note">100% STYLE · 100% GIRLISTA</div>
+  </div>
+  <div class="hero-visual reveal">
+    <div class="hero-orb"></div>
+    <img class="hero-photo" src="images/robe-rose.jpg" alt="Robe longue rose Girlista">
+    <div class="floating-tag tag-one">CHIC & UNIQUE ✦</div>
+    <div class="floating-tag tag-two">MADE WITH LOVE ♡</div>
+  </div>
+</section>
+<section class="section" id="collection">
+  <div class="section-head reveal"><div class="eyebrow">Sélection Girlista</div><h2>La collection</h2><p>Des pièces élégantes pour composer un look qui attire les regards. Retrouvez les modèles et leurs disponibilités sur Instagram.</p></div>
+  <div class="categories reveal"><button class="chip active" data-filter="all">Tout voir</button><button class="chip" data-filter="clair">Tons clairs</button><button class="chip" data-filter="couleur">Couleurs</button><button class="chip" data-filter="sombre">Tons foncés</button></div>
+  <div class="products">
+    <article class="product reveal" data-kind="clair"><div class="product-media"><img src="images/robe-ivoire.jpg" alt="Robe longue côtelée ivoire portée"><span class="product-label">Élégance douce</span></div><div class="product-info"><div><h3>Robe Ivoire</h3><p>Une silhouette raffinée</p></div><a class="product-link" href="https://www.instagram.com/girlista_by_nouraya/" target="_blank" aria-label="Voir sur Instagram">↗</a></div></article>
+    <article class="product reveal" data-kind="sombre"><div class="product-media"><img src="images/robe-chocolat.jpg" alt="Robe longue côtelée marron chocolat"><span class="product-label">Coup de cœur</span></div><div class="product-info"><div><h3>Robe Chocolat</h3><p>Chic au quotidien</p></div><a class="product-link" href="https://www.instagram.com/girlista_by_nouraya/" target="_blank" aria-label="Voir sur Instagram">↗</a></div></article>
+    <article class="product reveal" data-kind="couleur"><div class="product-media"><img src="images/robe-rose.jpg" alt="Robe longue rose poudré"><span class="product-label">Pink mood</span></div><div class="product-info"><div><h3>Robe Rose</h3><p>Douceur et féminité</p></div><a class="product-link" href="https://www.instagram.com/girlista_by_nouraya/" target="_blank" aria-label="Voir sur Instagram">↗</a></div></article>
+    <article class="product reveal" data-kind="couleur"><div class="product-media"><img src="images/cardigan-rose-porte.jpg" alt="Cardigan rose poudré porté"><img class="product-detail-thumb" src="images/cardigan-rose-detail.jpg" alt="Détail du cardigan rose"><span class="product-label">Nouvelle pièce</span></div><div class="product-info"><div><h3>Cardigan Rose</h3><p>Maille douce · Coupe décontractée</p></div><a class="product-link" href="https://www.instagram.com/girlista_by_nouraya/" target="_blank" rel="noopener" aria-label="Voir le cardigan rose sur Instagram">↗</a></div></article>
+    <article class="product reveal" data-kind="clair"><div class="product-media"><img src="images/robe-blanche.jpg" alt="Robe blanche en maille"><span class="product-label">Intemporel</span></div><div class="product-info"><div><h3>Robe Blanche</h3><p>Minimalisme élégant</p></div><a class="product-link" href="https://www.instagram.com/girlista_by_nouraya/" target="_blank" aria-label="Voir sur Instagram">↗</a></div></article>
+    <article class="product reveal" data-kind="couleur"><div class="product-media"><img src="images/robe-rouge.jpg" alt="Robe longue rouge bordeaux"><span class="product-label">Statement look</span></div><div class="product-info"><div><h3>Robe Bordeaux</h3><p>Une allure affirmée</p></div><a class="product-link" href="https://www.instagram.com/girlista_by_nouraya/" target="_blank" aria-label="Voir sur Instagram">↗</a></div></article>
+    <article class="product reveal" data-kind="sombre"><div class="product-media"><img src="images/robe-noire.jpg" alt="Robe longue noire élégante"><span class="product-label">Essentiel</span></div><div class="product-info"><div><h3>Robe Noire</h3><p>L'élégance en toute simplicité</p></div><a class="product-link" href="https://www.instagram.com/girlista_by_nouraya/" target="_blank" aria-label="Voir sur Instagram">↗</a></div></article>
+  </div>
+</section>
+<section class="story" id="histoire">
+  <img class="story-image reveal" src="images/look-cream.jpg" alt="Look crème élégant de Girlista">
+  <div class="story-copy reveal"><div class="eyebrow">Girlista · Marrakech & Maroc</div><h2>Le détail fait<br>toute la différence.</h2><p>Girlista vous propose une sélection de looks chic et uniques, avec une inspiration venue de Turquie. Découvrez les nouveautés, demandez les tailles disponibles et commandez directement auprès de la boutique.</p><a class="btn" href="https://wa.me/message/MLTKQPDCK53NH1" target="_blank" rel="noopener">Parler avec Girlista sur WhatsApp ↗</a></div>
+</section>
+<section class="section">
+  <div class="section-head reveal"><div class="eyebrow">L'expérience Girlista</div><h2>Votre style, notre passion</h2><p>Une expérience pensée pour vous aider à trouver votre prochain coup de cœur.</p></div>
+  <div class="benefits">
+    <div class="benefit reveal"><div class="symbol">✧</div><h3>Sélection soignée</h3><p>Des tenues choisies pour leur style et leurs détails.</p></div>
+    <div class="benefit reveal"><div class="symbol">♡</div><h3>Style unique</h3><p>Des inspirations chic pour créer votre propre allure.</p></div>
+    <div class="benefit reveal"><div class="symbol">⌁</div><h3>Livraison au Maroc</h3><p>Contactez la boutique pour les modalités de livraison.</p></div>
+  </div>
+</section>
+<section class="insta" id="contact"><div class="eyebrow reveal">Suivez notre univers</div><h2 class="reveal">Let's get dressed ♡</h2><p class="reveal">Les nouveautés, les détails et les commandes vous attendent sur Instagram.</p><a class="btn reveal" href="https://wa.me/message/MLTKQPDCK53NH1" target="_blank" rel="noopener">Nous contacter sur WhatsApp ↗</a></section>
+</main>
+<footer><div class="footer-logo">GIRLISTA<span>♡</span></div><small>Chic & unique outfits · Livraison partout au Maroc</small><small>© 2026 Girlista. Tous droits réservés.</small></footer>
+<a class="whatsapp-float" href="https://wa.me/message/MLTKQPDCK53NH1" target="_blank" rel="noopener" aria-label="Contacter Girlista sur WhatsApp"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16.02 3C8.86 3 3.04 8.8 3.03 15.94c0 2.28.6 4.5 1.75 6.46L3 29l6.78-1.77a13.1 13.1 0 0 0 6.23 1.58h.01c7.15 0 12.97-5.81 12.98-12.95A12.88 12.88 0 0 0 25.2 6.7 12.9 12.9 0 0 0 16.02 3zm0 23.62h-.01a10.9 10.9 0 0 1-5.55-1.52l-.4-.24-4.02 1.05 1.07-3.91-.26-.4a10.77 10.77 0 0 1-1.66-5.66c0-5.97 4.87-10.83 10.85-10.83a10.77 10.77 0 0 1 7.68 3.18 10.77 10.77 0 0 1 3.17 7.68c0 5.97-4.87 10.83-10.86 10.83zm5.96-8.11c-.33-.16-1.94-.96-2.24-1.07-.3-.11-.52-.16-.74.16-.22.33-.85 1.07-1.04 1.29-.19.22-.38.25-.71.08-.33-.16-1.39-.51-2.65-1.63-.98-.87-1.64-1.94-1.83-2.27-.19-.33-.02-.5.14-.66.15-.15.33-.38.49-.57.16-.19.22-.33.33-.55.11-.22.06-.41-.03-.57-.08-.16-.74-1.78-1.01-2.44-.27-.64-.54-.55-.74-.56h-.63c-.22 0-.57.08-.87.41-.3.33-1.14 1.11-1.14 2.71s1.17 3.15 1.33 3.37c.16.22 2.3 3.51 5.57 4.92.78.34 1.39.54 1.86.69.78.25 1.49.22 2.05.13.63-.09 1.94-.79 2.22-1.56.27-.77.27-1.43.19-1.56-.08-.14-.3-.22-.63-.38z"/></svg><span>Commander sur WhatsApp</span></a>
+<script>
+const nav=document.getElementById('nav'),menu=document.getElementById('menu');
+const progress=document.getElementById('scrollProgress');
+const updateProgress=()=>{const max=document.documentElement.scrollHeight-innerHeight;progress.style.width=(max>0?(scrollY/max)*100:0)+'%'};
+addEventListener('scroll',updateProgress,{passive:true});updateProgress();
+document.querySelectorAll('.products .product').forEach((card,i)=>card.style.setProperty('--reveal-delay',(i%3)*110+'ms'));
+if(matchMedia('(hover:hover) and (pointer:fine)').matches){const heroVisual=document.querySelector('.hero-visual'),heroPhoto=document.querySelector('.hero-photo');heroVisual?.addEventListener('mousemove',e=>{const r=heroVisual.getBoundingClientRect(),x=(e.clientX-r.left)/r.width-.5,y=(e.clientY-r.top)/r.height-.5;heroPhoto.style.transform=`rotateY(${-9+x*12}deg) rotateX(${-y*8}deg) translateY(-5px)`});heroVisual?.addEventListener('mouseleave',()=>heroPhoto.style.transform='')}
+menu.addEventListener('click',()=>nav.classList.toggle('open'));
+nav.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>nav.classList.remove('open')));
+const observer=new IntersectionObserver(entries=>entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add('visible');observer.unobserve(entry.target)}}),{threshold:.12});
+document.querySelectorAll('.reveal').forEach((el,i)=>{if(!el.style.getPropertyValue('--reveal-delay'))el.style.setProperty('--reveal-delay',(i%4)*65+'ms');observer.observe(el)});
+document.querySelectorAll('.chip').forEach(chip=>chip.addEventListener('click',()=>{
+ document.querySelectorAll('.chip').forEach(c=>c.classList.remove('active'));chip.classList.add('active');
+ const filter=chip.dataset.filter;
+ document.querySelectorAll('.product').forEach(card=>{card.style.display=(filter==='all'||card.dataset.kind===filter)?'':'none'});
+}));
+if(matchMedia('(hover:hover) and (pointer:fine)').matches){
+ document.querySelectorAll('.product').forEach(card=>{
+  card.addEventListener('mousemove',e=>{const r=card.getBoundingClientRect(),x=(e.clientX-r.left)/r.width-.5,y=(e.clientY-r.top)/r.height-.5;card.style.transform=`perspective(900px) rotateX(${-y*5}deg) rotateY(${x*5}deg) translateY(-3px)`});
+  card.addEventListener('mouseleave',()=>card.style.transform='');
+ });
+}
+</script>
+</body>
+</html>
